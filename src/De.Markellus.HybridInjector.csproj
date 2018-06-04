@@ -45,6 +45,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -62,9 +63,18 @@
     <Page Include="De.Markellus.HybridInjector\App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Compile Include="De.Markellus.HybridInjector\Misc\BaseClass.cs" />
     <Compile Include="De.Markellus.HybridInjector\Misc\MusicPlayer.cs" />
     <Compile Include="De.Markellus.HybridInjector\Misc\PortableSettingsProvider.cs" />
     <Compile Include="De.Markellus.HybridInjector\Misc\ResourceExtractor.cs" />
+    <Compile Include="De.Markellus.HybridInjector\Misc\Wildcard.cs" />
+    <Compile Include="De.Markellus.HybridInjector\Misc\WpfCommands.cs" />
+    <Compile Include="De.Markellus.HybridInjector\Xaml\SelectFileDialog.xaml.cs">
+      <DependentUpon>SelectFileDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="De.Markellus.HybridInjector\Xaml\SelectProcessDialog.xaml.cs">
+      <DependentUpon>SelectProcessDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NAudio\Codecs\ALawDecoder.cs" />
     <Compile Include="NAudio\Codecs\ALawEncoder.cs" />
     <Compile Include="NAudio\Codecs\G722Codec.cs" />
@@ -418,6 +428,12 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="De.Markellus.HybridInjector\Xaml\SelectFileDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="De.Markellus.HybridInjector\Xaml\SelectProcessDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\Styles\Buttons.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -486,6 +502,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\music.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Textures\music.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

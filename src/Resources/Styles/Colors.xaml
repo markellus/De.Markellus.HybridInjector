@@ -2,6 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:EvilCaesar.Injector.Resources.Styles">
 
+    <SolidColorBrush x:Key="WindowTitleBackground" Color="#FF680005" />
+
     <LinearGradientBrush x:Key="ButtonNormal">
         <GradientStop Color="#FFA89B98"/>
         <GradientStop Color="#FF4D4948"/>

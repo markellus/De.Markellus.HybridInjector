@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:De.Markellus.HybridInjector"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="GRAF MARKELLUS HYBRID INJECTOR v0.1a ✌ ᕙ(⇀‸↼‶)ᕗ ✌"
+        SizeToContent="Height"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Width="430">
+    <Grid Margin="0" Background="Transparent">
+        <Button Content="Button" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="75"/>
+
     </Grid>
 </Window>

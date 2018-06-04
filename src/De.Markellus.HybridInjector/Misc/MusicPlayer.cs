@@ -4,7 +4,7 @@ using System.Windows;
 using De.Markellus.HybridInjector.Properties;
 using NAudio.Wave;
 
-namespace De.Markellus.HybridInjector.De.Markellus.HybridInjector.Misc
+namespace De.Markellus.HybridInjector.Misc
 {
     internal static class MusicPlayer
     {

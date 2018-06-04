@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace De.Markellus.HybridInjector.De.Markellus.HybridInjector.Misc
+namespace De.Markellus.HybridInjector.Misc
 {
     internal static class ResourceExtractor
     {

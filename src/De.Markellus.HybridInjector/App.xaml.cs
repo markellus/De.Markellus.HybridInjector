@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
-using De.Markellus.HybridInjector.De.Markellus.HybridInjector.Misc;
+using De.Markellus.HybridInjector.Misc;
+using De.Markellus.HybridInjector.Properties;
 
 namespace De.Markellus.HybridInjector
 {
@@ -35,6 +36,7 @@ namespace De.Markellus.HybridInjector
 #endif
             }
 
+            Settings.Default.Save();
             MusicPlayer.Dispose();
             Environment.Exit(0);
         }

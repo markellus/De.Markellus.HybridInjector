@@ -4,7 +4,7 @@ using System.IO;
 using System.Text;
 using System.Xml;
 
-namespace De.Markellus.HybridInjector.De.Markellus.HybridInjector.Misc
+namespace De.Markellus.HybridInjector.Misc
 {
     internal class PortableSettingsProvider : SettingsProvider
     {
@@ -18,7 +18,7 @@ namespace De.Markellus.HybridInjector.De.Markellus.HybridInjector.Misc
 
         public PortableSettingsProvider()
         {
-            _savingPath = ApplicationName + ".config";
+            _savingPath = ApplicationName + ".xml";
         }
 
         public override void Initialize(string name, NameValueCollection config)

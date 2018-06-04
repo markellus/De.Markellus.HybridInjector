@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:EvilCaesar.Injector.Resources.Styles">
+                    xmlns:local="clr-namespace:De.Markellus.HybridInjector"
+                    xmlns:commands="clr-namespace:De.Markellus.HybridInjector.Misc">
 
     <Color x:Key="From" A="255" R="0" G="0" B="200" />
     <Color x:Key="To" A="255" R="0" G="0" B="50" />
@@ -17,7 +18,28 @@
                         <Grid.Background>
                             <SolidColorBrush x:Name="bg" />
                         </Grid.Background>
-                        <ContentPresenter Margin="0" ContentSource="Content" RecognizesAccessKey="True" />
+
+                        <!-- TITLE -->
+                        <Grid Height="20" HorizontalAlignment="Stretch" VerticalAlignment="Top" Background="{StaticResource WindowTitleBackground}">
+                            <Grid.InputBindings>
+                                <MouseBinding Gesture="LeftClick" Command="{x:Static commands:WpfCommands.DragWindowCommand}"
+                                              CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor,  AncestorType={x:Type Window}}}"/>
+                            </Grid.InputBindings>
+                            <Label HorizontalContentAlignment="Left" Height="20" Margin="9,0">
+                                <TextBlock Text="{TemplateBinding Title}"/>
+                            </Label>
+                            <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft" Height="20" VerticalAlignment="Top" HorizontalAlignment="Right">
+                                <Button Content="X" HorizontalAlignment="Right" Width="20" Height="20" Margin="0,0,1,0" Command="{x:Static commands:WpfCommands.CloseCommand}"
+                                        CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor,  AncestorType={x:Type Window}}}"/>
+                                <Button Width="20" Height="20" HorizontalAlignment="Right" Margin="0,0,1,0" Command="{x:Static commands:WpfCommands.ToggleMusicCommand}">
+                                    <Image Margin="3" Source="/De.Markellus.HybridInjector;component/Resources/Textures/music.png" />
+                                </Button>
+                                <Button Content="C" HorizontalAlignment="Right" Width="20" Height="20" Margin="0" />
+                            </StackPanel>
+                        </Grid>
+
+                        <!-- CONTENT -->
+                        <ContentPresenter Margin="0,20" ContentSource="Content" RecognizesAccessKey="True" />
                     </Grid>
 
                     <ControlTemplate.Triggers>
