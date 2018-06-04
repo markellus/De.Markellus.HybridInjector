@@ -39,7 +39,7 @@
     <Color x:Key="ControlReadOnlyBorder">#484848</Color>
     <Color x:Key="ControlDisabledBorder">#787878</Color>
 
-    <SolidColorBrush x:Key="Color_TreeViewItem_Pressed" Color="#FF2424C9"></SolidColorBrush>
+    <SolidColorBrush x:Key="Color_TreeViewItem_Pressed" Color="#FFA20707"></SolidColorBrush>
 
     <LinearGradientBrush x:Key="Color_TreeViewItem_PressedBorder" StartPoint="0.5,0" EndPoint="0.5,1">
         <GradientStop Offset="0" Color="Transparent" />

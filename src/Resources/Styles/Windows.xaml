@@ -39,7 +39,7 @@
                         </Grid>
 
                         <!-- CONTENT -->
-                        <ContentPresenter Margin="0,20" ContentSource="Content" RecognizesAccessKey="True" />
+                        <ContentPresenter Margin="0,20,0,0" ContentSource="Content" RecognizesAccessKey="True" />
                     </Grid>
 
                     <ControlTemplate.Triggers>

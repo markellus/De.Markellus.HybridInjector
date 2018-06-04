@@ -4,14 +4,44 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:De.Markellus.HybridInjector"
+        xmlns:xaml="clr-namespace:De.Markellus.HybridInjector.Xaml"
         mc:Ignorable="d"
         Title="GRAF MARKELLUS HYBRID INJECTOR v0.1a ✌ ᕙ(⇀‸↼‶)ᕗ ✌"
         SizeToContent="Height"
         ResizeMode="NoResize"
         WindowStyle="None"
         Width="430">
+    <Window.Effect>
+        <BlurEffect x:Name="Blur" Radius="0"></BlurEffect>
+    </Window.Effect>
     <Grid Margin="0" Background="Transparent">
-        <Button Content="Button" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Width="75"/>
+        <StackPanel Margin="5,0,5,5">
+            <GroupBox Header="App Selection">
+                <Grid>
+                    <xaml:SelectProcessDialog x:Name="processSelector" Height="100" Margin="0"/>
+                </Grid>
+            </GroupBox>
+
+            <GroupBox Header="DLL List">
+                <Grid >
+
+                    <!--<Controls:DllSelector VerticalAlignment="Top" x:Name="dllSelector" Height="100" Margin="0" Background="Black"/>-->
+
+                    <Button x:Name="BtnToggleDLL" VerticalAlignment="Top" HorizontalAlignment="Left" Height="25" Width="97" Margin="0,105,0,0" Content="Add DLL" />
+
+                    <Button VerticalAlignment="Top" HorizontalAlignment="Left" Height="25" Width="96" Margin="204,105,0,0" Content="Options" IsEnabled="False" />
+
+                    <Grid x:Name="GrdFileSelector" Margin="0,135,0,0" Background="Black" Visibility="Collapsed">
+                        <xaml:SelectFileDialog x:Name="fileSelector" Height="200" VerticalAlignment="Top"  />
+                        <Button Margin="5,205,5,5" Height="25" Content="Add selected DLL" />
+                    </Grid>
+                </Grid>
+            </GroupBox>
+
+            <Button Height="25" FontSize="14" Content="Inject" BorderBrush="{StaticResource TextColor}" BorderThickness="2"></Button>
+
+        </StackPanel>
+
 
     </Grid>
 </Window>

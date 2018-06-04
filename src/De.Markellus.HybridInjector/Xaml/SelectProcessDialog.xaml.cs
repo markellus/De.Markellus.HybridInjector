@@ -141,9 +141,9 @@ namespace De.Markellus.HybridInjector.Xaml
             try
             {
                 string title = Process.MainWindowTitle;
-                if (title.Length > 27)
+                if (title.Length > 47)
                 {
-                    title = title.Substring(0, 27) + "...";
+                    title = title.Substring(0, 44) + "...";
                 }
                 this.Title = title;
             }
