@@ -1,0 +1,39 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:EvilCaesar.Injector.Resources.Styles">
+
+    <Color x:Key="From" A="255" R="0" G="0" B="200" />
+    <Color x:Key="To" A="255" R="0" G="0" B="50" />
+
+    <Style TargetType="{x:Type Window}" BasedOn="{StaticResource {x:Type Window}}">
+       
+        <Setter Property="Foreground" Value="{StaticResource TextColor}" />
+        <Setter Property="FontFamily" Value="Lucida Console" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Window">
+                    <Grid>
+                        <Grid.Background>
+                            <SolidColorBrush x:Name="bg" />
+                        </Grid.Background>
+                        <ContentPresenter Margin="0" ContentSource="Content" RecognizesAccessKey="True" />
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <EventTrigger RoutedEvent="Window.Loaded">
+                            <EventTrigger.Actions>
+                                <BeginStoryboard>
+                                    <Storyboard Storyboard.TargetName="bg" Storyboard.TargetProperty="Color">
+                                        <ColorAnimation From="{StaticResource From}" To="{StaticResource To}" AutoReverse="True" RepeatBehavior="Forever" Duration="0:0:5" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger.Actions>
+                        </EventTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>

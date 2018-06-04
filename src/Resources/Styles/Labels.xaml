@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:EvilCaesar.Injector.Resources.Styles">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Colors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="StatusText" TargetType="{x:Type Label}" BasedOn="{StaticResource {x:Type Label}}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <SolidColorBrush></SolidColorBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Padding" Value="0" />
+
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Label.Loaded">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)" >
+                            <ColorAnimation From="OrangeRed" To="Red" AutoReverse="True" RepeatBehavior="Forever" Duration="0:0:0.5"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+    
+    
+</ResourceDictionary>

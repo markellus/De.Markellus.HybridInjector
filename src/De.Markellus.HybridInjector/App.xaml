@@ -4,6 +4,20 @@
              xmlns:local="clr-namespace:De.Markellus.HybridInjector"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/De.Markellus.HybridInjector;component/Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="/De.Markellus.HybridInjector;component/Resources/Styles/Buttons.xaml" />
+                <ResourceDictionary Source="/De.Markellus.HybridInjector;component/Resources/Styles/CheckBoxes.xaml" />
+                <ResourceDictionary Source="/De.Markellus.HybridInjector;component/Resources/Styles/GroupBoxes.xaml" />
+                <ResourceDictionary Source="/De.Markellus.HybridInjector;component/Resources/Styles/Labels.xaml" />
+                <ResourceDictionary Source="/De.Markellus.HybridInjector;component/Resources/Styles/ListBoxes.xaml" />
+                <ResourceDictionary Source="/De.Markellus.HybridInjector;component/Resources/Styles/TextBlocks.xaml" />
+                <ResourceDictionary Source="/De.Markellus.HybridInjector;component/Resources/Styles/TextBoxes.xaml" />
+                <ResourceDictionary Source="/De.Markellus.HybridInjector;component/Resources/Styles/TreeViews.xaml" />
+                <ResourceDictionary Source="/De.Markellus.HybridInjector;component/Resources/Styles/Windows.xaml" />
+                <ResourceDictionary Source="/De.Markellus.HybridInjector;component/Resources/Styles/Misc.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

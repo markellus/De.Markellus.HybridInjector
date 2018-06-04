@@ -1,0 +1,63 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:EvilCaesar.Injector.Resources.Styles">
+
+    <LinearGradientBrush x:Key="ButtonNormal">
+        <GradientStop Color="#FFA89B98"/>
+        <GradientStop Color="#FF4D4948"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ButtonClick">
+        <GradientStop Color="#FF5C2014"/>
+        <GradientStop Color="#FFB0452C"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ButtonHover">
+        <GradientStop Color="#FF757474"/>
+        <GradientStop Color="#FF918F8F"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="TextColor" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="ControlBorderBrush" Color="{Binding ElementName=ControlBorder}" />
+    <SolidColorBrush x:Key="ControlBackgroundBrush" Color="{Binding ElementName=ControlBackground}" />
+
+    <Color x:Key="ControlForeground">#181818</Color>
+    <Color x:Key="ControlReadOnlyForeground">#383838</Color>
+    <Color x:Key="ControlDisabledForeground">#686868</Color>
+
+    <Color x:Key="ControlBackground">#f7f7f9</Color>
+    <Color x:Key="ControlHoveredBackground">#fafafc</Color>
+    <Color x:Key="ControlFocusedBackground">#fdfdff</Color>
+    <Color x:Key="ControlReadOnlyBackground">#f2f2f4</Color>
+    <Color x:Key="ControlDisabledBackground">#efeff2</Color>
+
+    <Color x:Key="ControlBorder">#383838</Color>
+    <Color x:Key="ControlHoveredBorder">#0BBAE0</Color>
+    <Color x:Key="ControlFocusedBorder">#000000</Color>
+    <Color x:Key="ControlReadOnlyBorder">#484848</Color>
+    <Color x:Key="ControlDisabledBorder">#787878</Color>
+
+    <SolidColorBrush x:Key="Color_TreeViewItem_Pressed" Color="#FF2424C9"></SolidColorBrush>
+
+    <LinearGradientBrush x:Key="Color_TreeViewItem_PressedBorder" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Offset="0" Color="Transparent" />
+        <GradientStop Offset="1" Color="Transparent" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="Color_TreeViewItem_MouseOver" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Offset="0" Color="#FFFFFFFF" />
+        <GradientStop Offset="0.318" Color="#FFFEF3B5" />
+        <GradientStop Offset="0.488" Color="#FFFFEB70" />
+        <GradientStop Offset="0.502" Color="#FFFFD02E" />
+        <GradientStop Offset="0.834" Color="#FFFFD932" />
+        <GradientStop Offset="1" Color="#FFFFF48B" />
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="Color_TreeViewItem_MouseOverBorder" Color="#FFE99862" />
+
+    <LinearGradientBrush x:Key="Color_TreeViewItem_MouseOverHighlight" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Offset="0" Color="#FFFFFFFB" />
+        <GradientStop Offset="1" Color="#FFFEF3B5" />
+    </LinearGradientBrush>
+
+</ResourceDictionary>
