@@ -29,13 +29,14 @@ namespace De.Markellus.HybridInjector.Misc
         public static void Dispose()
         {
             _wavePlayer.PlaybackStopped -= RestartMusic;
-            _wavePlayer.Dispose();
-            _mp3Reader.Dispose();
+            _wavePlayer?.Dispose();
+            _mp3Reader?.Dispose();
         }
 
         public static void RestartMusic(object sender, StoppedEventArgs e)
         {
             _wavePlayer?.Dispose();
+            _mp3Reader?.Dispose();
 
             MemoryStream stream = new MemoryStream(ResourceExtractor.Extract(Assembly.GetAssembly(Application.Current.GetType()), "resources/music.mp3"));
 
