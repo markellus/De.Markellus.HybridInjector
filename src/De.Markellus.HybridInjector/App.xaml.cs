@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows;
+using De.Markellus.HybridInjector.De.Markellus.HybridInjector.Misc;
 
 namespace De.Markellus.HybridInjector
 {
@@ -13,5 +9,34 @@ namespace De.Markellus.HybridInjector
     /// </summary>
     public partial class App : Application
     {
+        [STAThread()]
+        static void Main()
+        {
+            App app = new App();
+            app.InitializeComponent();
+
+            FrameworkElement.StyleProperty.OverrideMetadata(typeof(Window), new FrameworkPropertyMetadata
+            {
+                DefaultValue = Application.Current.FindResource(typeof(Window))
+            });
+
+            try
+            {
+                MusicPlayer.RestartMusic(null, null);
+                app.Run();
+            }
+            catch (Exception ex)
+            {
+#if(DEBUG)
+                MessageBox.Show(ex.Message);
+#else
+                MessageBox.Show("The injector encountered an unexpected problem.", "FATAL ERROR", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK, MessageBoxOptions.RtlReading);
+                Environment.Exit(3217);
+#endif
+            }
+
+            MusicPlayer.Dispose();
+            Environment.Exit(0);
+        }
     }
 }
