@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Drawing;
-using System.IO;
+using Alphaleonis.Win32.Filesystem;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Controls;
