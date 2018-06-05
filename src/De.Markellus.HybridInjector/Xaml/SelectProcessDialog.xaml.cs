@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel.Design.Serialization;
 using System.Diagnostics;
 using System.Drawing;
 using System.Management;
 using System.Threading;
-using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Interop;
 using System.Windows.Media.Imaging;
@@ -77,12 +75,7 @@ namespace De.Markellus.HybridInjector.Xaml
                     DispatchService.Invoke(() => { Root.Add(new ProcessItem(p, this)); });
                 }
             }
-            catch(Exception ex)
-            {
-#if (DEBUG)
-                //MessageBox.Show(ex.Message);
-#endif
-            }
+            catch { }
         }
     }
 

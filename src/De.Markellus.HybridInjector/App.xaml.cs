@@ -23,7 +23,7 @@ namespace De.Markellus.HybridInjector
 
             try
             {
-                MusicPlayer.RestartMusic(null, null);
+                MusicPlayer.RestartMusic();
                 app.Run();
             }
             catch (Exception ex)
